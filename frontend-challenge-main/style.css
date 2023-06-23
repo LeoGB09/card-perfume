@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Montserrat:wght@500;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --font-principal: 'Fraunces', serif;
+    --font-secundaria: 'Montserrat', sans-serif;
+    --cor-primaria: #3c8067;
+    --bg-color: #f2ebe3;
+    --white-color: #fff;
+    --hover-button-color: #1c4a39;
+    --dark-blue-color: #1c232b;
+    --grayish-color: #6c7289;
+}
+
+body{
+    font-family: var(--font-secundaria);
+    background-color: var(--bg-color);
+    text-align: left;
+}
+
+.imagem-desktop{
+    display: none;
+}
+
+.imagem-mobile{
+    width: 100%;
+    border-radius: 15px 15px 0 0;
+}
+
+.container{
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.box{
+    background-color: var(--white-color);
+    border-radius: 15px;
+    margin: 0.5rem;
+}
+
+.conteudo{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding: 1rem;
+}
+
+.titulo{
+    font-family: var(--font-principal);
+    font-size: 32px;
+    color: var(--dark-blue-color);
+}
+
+.texto{
+    font-size: 14px;
+    color: var(--grayish-color);
+    line-height: 1.5;
+}
+
+.perfume{
+    letter-spacing: 0.5rem;
+}
+
+.precos{
+    font-family: var(--font-principal);
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    font-size: 32px;
+    color: var(--cor-primaria);
+}
+
+.preco-antigo{
+    font-size: 15px;
+    text-decoration: line-through;
+}
+
+.botao{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-family: var(--font-secundaria);
+    font-weight: bold;
+    font-size: 16px;
+    border: none;
+    padding: 1rem 0;
+    border-radius: 10px;
+    background-color: var(--cor-primaria);
+    color: var(--white-color);
+}
+
+@media screen and (min-width: 1440px) {
+    .box{
+        display: flex;
+        width: 50%;
+    }
+
+    .conteudo{
+        padding: 1vw 2vw;
+        width: 50%;
+    }
+
+    .titulo{
+        font-size: 2.7vw;
+        word-wrap: break-word;
+    }
+
+    .texto{
+        font-size: 1.2vw;
+        margin: 1rem 0;
+        word-wrap: break-word;
+    }
+
+    .imagem-desktop{
+        display: block;
+        border-radius: 15px 0 0 15px;
+        width: 100%;
+        max-height: 100%;
+    }
+
+    .imagem-mobile{
+        display: none;
+    }
+
+    .precos{
+        font-size: 2.2vw;
+        margin: 1vw 0;
+    }
+
+    .botao{
+        font-size: 1vw;
+        padding: 1vw 0;
+    }
+
+    .botao:hover{
+        background-color: var(--hover-button-color);
+    }
+}
